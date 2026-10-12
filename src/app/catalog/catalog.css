@@ -1,0 +1,140 @@
+.catalog {
+  padding: 136px 0 30px;
+  background-image: url("/img/catalog-bg.png");
+}
+
+.catalog__items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start
+}
+
+.item {
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  width: 384px;
+  height: 542px;
+  overflow: hidden;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+
+  img {
+    width: 100%;
+    display: block;
+    border-radius: 0;
+  }
+}
+
+.item__info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 24px 0 24px;
+  padding: 0 16px;
+  min-height: 0;
+}
+
+.item__title {
+  font-family: 'Onest Bold';
+  margin: 0 0 16px;
+  font-size: 18px;
+}
+
+.item__class {
+  font-family: 'Onest SemiBold';
+  font-size: 14px;
+  color: #bb863f;
+}
+
+.item__location {
+  margin-top: 6px;
+  font-family: 'Onest Regular';
+  font-size: 14px;
+  color: #a6a5a6;
+  font-weight: 400;
+}
+
+.item__star {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.item__star-grade {
+  margin-top: 12px;
+  font-family: 'Onest Regular';
+  font-size: 14px;
+  color: #222727;
+}
+
+.item__star-grade::before {
+  content: '';
+  display: inline-block;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+  background-image: url('/img/star5.svg');
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.item__star-currency {
+  font-family: 'Onest SemiBold';
+  font-size: 14px;
+  color: #bb863f;
+}
+
+.item__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-family: 'Onest Regular';
+  margin: 12px 0;
+  font-size: 14px;
+  color: #404141;
+
+  .tag {
+    background-color: #f2f2f2;
+    border-radius: 1000px;
+    padding: 5px 10px;
+  }
+}
+
+.item__descr {
+  flex: 1;
+  overflow: hidden;
+  font-family: 'Onest Regular';
+  font-size: 14px;
+  line-height: 110%;
+  color: #222727;
+  margin-bottom: auto;
+
+  -webkit-mask-image: linear-gradient(to bottom, #000 10%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 90%, transparent 100%);
+}
+
+.item__btn--about {
+  margin-top: 16px;
+  font-family: 'Onest Bold';
+  font-size: 16px;
+  color: #794a0b;
+  border: none;
+  outline: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  border-bottom: 1px solid #794a0b;
+  align-self: flex-start;
+}
+
+.item--expanded {
+  height: auto;
+}
+
+.item--expanded .item__descr {
+  -webkit-mask-image: none;
+  mask-image: none;
+}

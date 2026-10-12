@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 120px;
+}
+
+/*@media (min-width: 992px) {*/
+/*  .container {*/
+/*    padding: 0 120px;*/
+/*  }*/
+/*}*/
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('/fonts/PlayfairDisplay-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Onest Regular';
+  src: url('/fonts/Onest-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Onest Bold';
+  src: url('/fonts/Onest-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Onest SemiBold';
+  src: url('/fonts/Onest-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}

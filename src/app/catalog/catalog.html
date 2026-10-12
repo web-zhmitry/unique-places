@@ -1,0 +1,41 @@
+<section class="catalog">
+  <div class="container">
+    <div class="catalog__items">
+      @for (place of places; track place.id) {
+        <div class="item" [class.item--expanded]="place.expanded">
+          <div class="item__img">
+            <img [src]="place.image" [alt]="place.title">
+          </div>
+          <div class="item__info">
+            <div class="item__title">{{ place.title }}</div>
+            <div class="item__class">{{ place.category }}</div>
+            <div class="item__location">{{ place.location }}</div>
+
+            <div class="item__star">
+              <div class="item__star-grade">{{ place.rating }}</div>
+              @if (place.priceCategory) {
+                <div class="item__star-currency">{{ place.priceCategory }}</div>
+              }
+            </div>
+
+            @if (place.tags && place.tags.length > 0) {
+              <div class="item__tags">
+                @for (tag of place.tags; track tag) {
+                  <div class="tag">{{ tag }}</div>
+                }
+              </div>
+            }
+
+            <div class="item__descr" [class.item__descr--expanded]="place.expanded">
+              {{ place.description }}
+            </div>
+
+            <button class="item__btn--about" (click)="place.expanded = !place.expanded">
+              {{ place.expanded ? 'Скрыть' : 'Подробнее' }}
+            </button>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
