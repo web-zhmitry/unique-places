@@ -42,3 +42,34 @@
   src: url('/fonts/Onest-SemiBold.ttf') format('truetype');
   font-weight: 600;
 }
+
+@font-face {
+  font-family: 'Onest Light';
+  src: url('/fonts/Onest-Light.ttf') format('truetype');
+  font-weight: 600;
+}
+
+.custom-tooltip {
+  font-family: 'Onest Regular';
+  position: fixed;
+  background: #404141;
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+  pointer-events: none;
+  transform: translate(-87%, 180%);
+}
+
+.custom-tooltip:before {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: #404141;
+  left: 80%;
+  top: -25%;
+  transform: rotate(45deg);
+  z-index: -1;
+}

@@ -7,3 +7,35 @@
   display: flex;
   align-items: center;
 }
+
+.header__inner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.favorites-counter {
+  position: relative;
+}
+
+.favorites-counter {
+  position: relative;
+  cursor: pointer;
+}
+
+.favorites-counter__count {
+  position: absolute;
+  left: 15px;
+  top: 8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #404141;
+  color: #fff;
+  font-family: 'Onest Light';
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
