@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { FavoritesService } from '../services/favorites';
+import { FavoritesService } from '../../shareds/services/favorites';
 
 @Component({
   selector: 'app-header',

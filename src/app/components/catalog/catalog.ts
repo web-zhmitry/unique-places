@@ -1,7 +1,8 @@
 import { Component, signal, computed } from '@angular/core';
 import { PlaceCard } from '../place-card/place-card';
 import { PlaceModal } from '../place-modal/place-modal';
-import { FavoritesService } from '../services/favorites';
+import { FavoritesService } from '../../shareds/services/favorites';
+import { Place } from '../../models/place';
 
 @Component({
   selector: 'app-catalog',
@@ -12,7 +13,7 @@ import { FavoritesService } from '../services/favorites';
 export class Catalog {
   constructor(public favoritesService: FavoritesService) {}
 
-  places = signal([
+  places = signal<Place[]>([
     {
       id: 1,
       image: '/img/catalog/image-1.png',
@@ -98,9 +99,7 @@ export class Catalog {
       badge: null,
     },
   ]);
-
   selectedCategory = signal<string>('Все');
-
   filteredPlaces = computed(() => {
     const category = this.selectedCategory();
     if (category === 'Все') {
@@ -113,9 +112,9 @@ export class Catalog {
     this.selectedCategory.set(category);
   }
 
-  selectedPlace = signal<any>(null);
+  selectedPlace = signal<Place | null>(null);
 
-  openDetails(place: any): void {
+  openDetails(place: Place): void {
     this.selectedPlace.set(place);
   }
 

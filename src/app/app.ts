@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { Header } from './header/header';
-import { Hero } from './hero/hero';
-import { Catalog } from './catalog/catalog';
-import { Footer } from './footer/footer';
+import { Header } from './components/header/header';
+import { Hero } from './components/hero/hero';
+import { Catalog } from './components/catalog/catalog';
+import { Footer } from './components/footer/footer';
 
 @Component({
   selector: 'app-root',

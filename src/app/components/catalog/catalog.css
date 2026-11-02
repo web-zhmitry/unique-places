@@ -24,8 +24,13 @@
     font-family: 'Onest Regular';
     cursor: pointer;
   }
+
   .tab:hover {
     background-color: #e8d8b8;
+  }
+
+  .active {
+    background: #e8d8b8;
   }
 }
 

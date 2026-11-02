@@ -29,10 +29,10 @@
       }
     </div>
   </div>
-  @if (selectedPlace()) {
+  @if (selectedPlace(); as place) {
     <app-place-modal
-      [place]="selectedPlace()"
-      [isFavorite]="favoritesService.isFavorite(selectedPlace().id)"
+      [place]="place"
+      [isFavorite]="favoritesService.isFavorite(place.id)"
       (close)="closeDetails()"
       (toggleFavorite)="favoritesService.toggleFavorite($event)">
     </app-place-modal>
